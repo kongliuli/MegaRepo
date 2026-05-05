@@ -121,6 +121,33 @@ git checkout feature/tools-components
   - NewTextByCard - 文本卡片管理工具
   - shared-tools - Practice-Projects-Hub 的工具文档集合
 
+### 归档分支
+
+| 分支名称 | 用途 | 来源仓库 |
+|----------|------|----------|
+| **archive/localdts** | LocalDts 仓库归档 | [kongliuli/LocalDts](https://github.com/kongliuli/LocalDts) |
+| **archive/mindmap** | MindMap 仓库归档 | [kongliuli/MindMap](https://github.com/kongliuli/MindMap) |
+| **archive/2025coderepo** | 2025CodeRepository 仓库归档 | [kongliuli/2025CodeRepository](https://github.com/kongliuli/2025CodeRepository) |
+
+### 归档分支导航
+
+```bash
+# 切换到 LocalDts 归档分支
+git checkout archive/localdts
+
+# 切换到 MindMap 归档分支
+git checkout archive/mindmap
+
+# 切换到 2025CodeRepository 归档分支
+git checkout archive/2025coderepo
+```
+
+### 归档分支说明
+
+- **archive/localdts**: 包含完整的 LocalDts 数据迁移工具项目，包括 WPF 和 Blazor 版本
+- **archive/mindmap**: 思维导图相关项目
+- **archive/2025coderepo**: 2025年代码仓库归档（已移除敏感文件）
+
 ## 快速开始
 
 ### 环境要求
