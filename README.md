@@ -65,12 +65,27 @@ MegaRepo/
 
 ### 额外仓库评估概览
 
-| 仓库 | 等级 | 综合评分 | 可重用程度 |
-|------|------|:---:|----------|
-| moyu | C | 2.8 | 高 |
-| uDatabaseTool | C | 2.5 | 中 |
-| Practice-Projects-Hub | D | 2.0 | 低 |
-| NewRepoBySiHuo | E | 1.2 | 低 |
+| 仓库 | 状态 | 等级 | 综合评分 | 可重用程度 |
+|------|------|------|:---:|----------|
+| Practice-Projects-Hub | ✅ 活跃 | B | 3.5 | 高 |
+| moyu | ⚠️ 部分迁移 | C | 2.9 | 高 |
+| NewRepoBySiHuo | ❌ 已归档 | D | 2.25 | 低 |
+| uDatabaseTool | ❌ 已归档 | D | 2.0 | 低 |
+
+### 关键发现
+
+1. **仓库整合趋势**: moyu、uDatabaseTool、NewRepoBySiHuo 的核心内容正在向 **Practice-Projects-Hub** 迁移
+2. **技术栈升级**: Practice-Projects-Hub 采用 .NET 8、WPF MVVM、SqlSugar 等现代技术
+3. **需求驱动**: 新项目强调清晰的需求文档和开发目标
+
+### 优先级建议
+
+| 优先级 | 仓库 | 行动 |
+|:---:|------|------|
+| 1 | Practice-Projects-Hub | **重点关注**，这是未来开发的主要目标 |
+| 2 | moyu | 参考现有项目，提取可重用组件 |
+| 3 | NewRepoBySiHuo | 参考 OutpatientInventoryManager 的架构设计 |
+| 4 | uDatabaseTool | 仅作为历史归档参考 |
 
 ## 快速开始
 
