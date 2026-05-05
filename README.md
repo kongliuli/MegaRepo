@@ -72,6 +72,9 @@ MegaRepo/
 | moyu | ⚠️ 部分迁移 | C | 2.9 | 高 |
 | NewRepoBySiHuo | ❌ 已归档 | D | 2.25 | 低 |
 | uDatabaseTool | ❌ 已归档 | D | 2.0 | 低 |
+| LocalDts | ❌ 已归档 | - | - | 中 |
+| MindMap | ❌ 已归档 | - | - | 中 |
+| 2025CodeRepository | ✅ 项目已提取 | - | - | 高 |
 
 ### 关键发现
 
@@ -90,14 +93,23 @@ MegaRepo/
 
 ## 分支管理
 
-### 活跃分支
+### 活跃分支（从各仓库提取的项目）
 
-| 分支名称 | 用途 | 包含内容 |
-|----------|------|----------|
-| **main** | 主分支 | 项目分析文档、整合计划 |
-| **feature/universal-invoice** | 通用票据处理工具 | 跨平台票据处理系统 |
-| **feature/outpatient-inventory** | 门诊库存管理系统 | MAUI 移动端 + Web API |
-| **feature/tools-components** | 工具组件合集 | SuffixChange.Form、NewTextByCard、shared-tools |
+| 分支名称 | 用途 | 包含内容 | 来源仓库 |
+|----------|------|----------|----------|
+| **main** | 主分支 | 项目分析文档、整合计划 | - |
+| **feature/universal-invoice** | 通用票据处理工具 | 跨平台票据处理系统 | Practice-Projects-Hub |
+| **feature/outpatient-inventory** | 门诊库存管理系统 | MAUI 移动端 + Web API | NewRepoBySiHuo |
+| **feature/tools-components** | 工具组件合集 | SuffixChange.Form、NewTextByCard、shared-tools | moyu、Practice-Projects-Hub |
+| **feature/autoticket** | 自动购票系统 | 大麦网、保利票务自动购票 | 2025CodeRepository |
+| **feature/autowebclient** | 自动化Web客户端 | CEFSharp 自动化浏览器 | 2025CodeRepository |
+| **feature/dingtalklib** | 钉钉开发库 | 钉钉接口封装 | 2025CodeRepository |
+| **feature/diting-utils** | 通用工具库 | 各种工具函数封装 | 2025CodeRepository |
+| **feature/programcell** | Blazor项目管理工具 | Blazor Server 项目管理工具 | 2025CodeRepository |
+| **feature/blazor-trae** | Blazor Trae项目 | Blazor项目 | 2025CodeRepository |
+| **feature/yunwei-tool** | 运维工具 | 运维相关工具 | 2025CodeRepository |
+| **feature/dbconnection-wpf** | 数据库连接工具 | WPF 数据库连接管理器 | 2025CodeRepository |
+| **feature/fileexplorer** | 文件资源管理器 | WPF 文件浏览工具 | 2025CodeRepository |
 
 ### 分支导航
 
@@ -110,6 +122,33 @@ git checkout feature/outpatient-inventory
 
 # 切换到 tools-components 分支
 git checkout feature/tools-components
+
+# 切换到 autoticket 分支
+git checkout feature/autoticket
+
+# 切换到 autowebclient 分支
+git checkout feature/autowebclient
+
+# 切换到 dingtalklib 分支
+git checkout feature/dingtalklib
+
+# 切换到 diting-utils 分支
+git checkout feature/diting-utils
+
+# 切换到 programcell 分支
+git checkout feature/programcell
+
+# 切换到 blazor-trae 分支
+git checkout feature/blazor-trae
+
+# 切换到 yunwei-tool 分支
+git checkout feature/yunwei-tool
+
+# 切换到 dbconnection-wpf 分支
+git checkout feature/dbconnection-wpf
+
+# 切换到 fileexplorer 分支
+git checkout feature/fileexplorer
 ```
 
 ### 分支说明
@@ -120,6 +159,15 @@ git checkout feature/tools-components
   - SuffixChange.Form - 文件后缀批量修改工具
   - NewTextByCard - 文本卡片管理工具
   - shared-tools - Practice-Projects-Hub 的工具文档集合
+- **feature/autoticket**: 提取自 2025CodeRepository 的自动购票系统，支持大麦网和保利票务
+- **feature/autowebclient**: 提取自 2025CodeRepository 的自动化Web客户端，使用 CEFSharp
+- **feature/dingtalklib**: 提取自 2025CodeRepository 的钉钉开发库封装
+- **feature/diting-utils**: 提取自 2025CodeRepository 的通用工具库
+- **feature/programcell**: 提取自 2025CodeRepository 的 Blazor Server 项目管理工具
+- **feature/blazor-trae**: 提取自 2025CodeRepository 的 Blazor项目
+- **feature/yunwei-tool**: 提取自 2025CodeRepository 的运维工具
+- **feature/dbconnection-wpf**: 提取自 2025CodeRepository 的数据库连接工具
+- **feature/fileexplorer**: 提取自 2025CodeRepository 的文件资源管理器
 
 ### 归档分支
 
@@ -127,7 +175,6 @@ git checkout feature/tools-components
 |----------|------|----------|
 | **archive/localdts** | LocalDts 仓库归档 | [kongliuli/LocalDts](https://github.com/kongliuli/LocalDts) |
 | **archive/mindmap** | MindMap 仓库归档 | [kongliuli/MindMap](https://github.com/kongliuli/MindMap) |
-| **archive/2025coderepo** | 2025CodeRepository 仓库归档 | [kongliuli/2025CodeRepository](https://github.com/kongliuli/2025CodeRepository) |
 
 ### 归档分支导航
 
@@ -137,16 +184,12 @@ git checkout archive/localdts
 
 # 切换到 MindMap 归档分支
 git checkout archive/mindmap
-
-# 切换到 2025CodeRepository 归档分支
-git checkout archive/2025coderepo
 ```
 
 ### 归档分支说明
 
 - **archive/localdts**: 包含完整的 LocalDts 数据迁移工具项目，包括 WPF 和 Blazor 版本
 - **archive/mindmap**: 思维导图相关项目
-- **archive/2025coderepo**: 2025年代码仓库归档（已移除敏感文件）
 
 ## 快速开始
 
