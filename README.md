@@ -39,6 +39,7 @@ MegaRepo/
 
 | 文档 | 说明 |
 |------|------|
+| [综合评估和分析](analysis/comprehensive-evaluation.md) | 所有项目的综合评估、分类建议、保留和废弃建议（最新） |
 | [项目清单](analysis/projects.md) | 9个项目的基本信息和分类 |
 | [评分规则](analysis/scoring-rules.md) | 项目评分标准（代码质量、架构设计、文档完整性、可维护性） |
 | [评分结果](analysis/score-results.md) | 各项目的详细评分和等级 |
