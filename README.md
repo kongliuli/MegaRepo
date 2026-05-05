@@ -23,7 +23,17 @@ MegaRepo/
 
 ## 项目分析
 
-已完成对 [kongliuli/practice-repository](https://github.com/kongliuli/practice-repository) 的全面分析：
+已完成对多个仓库的分析：
+
+### 已分析仓库
+
+| 仓库 | 状态 |
+|------|------|
+| [kongliuli/practice-repository](https://github.com/kongliuli/practice-repository) | ✅ 已完成详细分析 |
+| [kongliuli/moyu](https://github.com/kongliuli/moyu) | ✅ 已在 practice-repository 中有分析 |
+| [kongliuli/uDatabaseTool](https://github.com/kongliuli/uDatabaseTool) | ⚠️ 初步评估 |
+| [kongliuli/Practice-Projects-Hub](https://github.com/kongliuli/Practice-Projects-Hub) | ⚠️ 初步评估 |
+| [kongliuli/NewRepoBySiHuo](https://github.com/kongliuli/NewRepoBySiHuo) | ⚠️ 初步评估 |
 
 ### 分析文档
 
@@ -35,8 +45,9 @@ MegaRepo/
 | [可重用组件](analysis/reusable-components.md) | 可重用程度评估和组件清单 |
 | [组件化规范](analysis/componentization-spec.md) | 模块化、接口设计和依赖管理规范 |
 | [整合指南](analysis/integration-guide.md) | 整合优先级建议和里程碑计划 |
+| [额外仓库评估](analysis/additional-repos.md) | 对 moyu、uDatabaseTool 等仓库的补充评估 |
 
-### 评分概览
+### practice-repository 评分概览
 
 | 等级 | 项目数量 | 项目名称 |
 |------|----------|----------|
@@ -51,6 +62,15 @@ MegaRepo/
 | 高 | 2 | 可直接作为核心组件重用 |
 | 中 | 6 | 需要一定程度改造后重用 |
 | 低 | 1 | 仅可参考部分代码 |
+
+### 额外仓库评估概览
+
+| 仓库 | 等级 | 综合评分 | 可重用程度 |
+|------|------|:---:|----------|
+| moyu | C | 2.8 | 高 |
+| uDatabaseTool | C | 2.5 | 中 |
+| Practice-Projects-Hub | D | 2.0 | 低 |
+| NewRepoBySiHuo | E | 1.2 | 低 |
 
 ## 快速开始
 
