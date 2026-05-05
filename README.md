@@ -88,6 +88,39 @@ MegaRepo/
 | 3 | NewRepoBySiHuo | 参考 OutpatientInventoryManager 的架构设计 |
 | 4 | uDatabaseTool | 仅作为历史归档参考 |
 
+## 分支管理
+
+### 活跃分支
+
+| 分支名称 | 用途 | 包含内容 |
+|----------|------|----------|
+| **main** | 主分支 | 项目分析文档、整合计划 |
+| **feature/universal-invoice** | 通用票据处理工具 | 跨平台票据处理系统 |
+| **feature/outpatient-inventory** | 门诊库存管理系统 | MAUI 移动端 + Web API |
+| **feature/tools-components** | 工具组件合集 | SuffixChange.Form、NewTextByCard、shared-tools |
+
+### 分支导航
+
+```bash
+# 切换到 universal-invoice 分支
+git checkout feature/universal-invoice
+
+# 切换到 outpatient-inventory 分支
+git checkout feature/outpatient-inventory
+
+# 切换到 tools-components 分支
+git checkout feature/tools-components
+```
+
+### 分支说明
+
+- **feature/universal-invoice**: 迁移自 Practice-Projects-Hub 的 universal-invoice 项目，用于处理发票和收据等票据
+- **feature/outpatient-inventory**: 迁移自 NewRepoBySiHuo 的 OutpatientInventoryManager，包含完整的门诊库存管理架构
+- **feature/tools-components**: 整合了三个工具项目：
+  - SuffixChange.Form - 文件后缀批量修改工具
+  - NewTextByCard - 文本卡片管理工具
+  - shared-tools - Practice-Projects-Hub 的工具文档集合
+
 ## 快速开始
 
 ### 环境要求
