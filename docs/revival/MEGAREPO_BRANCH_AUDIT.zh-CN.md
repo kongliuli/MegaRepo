@@ -9,6 +9,11 @@
 
 `archive/localdts` 曾是最值得拆的分支，但现在已经确认存在独立私有仓 `LocalDts`，后续以私有仓为准。
 
+2026-07-02 已执行清理：在 `MegaRepo` 新增并推送 `archive/revival-docs` 分支保存本轮复活文档；随后删除已留档的旧远端分支。当前 GitHub 远端仅保留：
+
+- `main`
+- `archive/revival-docs`
+
 三个此前标记“再看一眼”的分支已复查：
 
 - `feature/outpatient-inventory`：早期骨架，可删。
@@ -210,9 +215,5 @@
 ## 推荐动作
 
 1. `LocalDts` 后续以独立私有仓为准，不再从 `MegaRepo/archive/localdts` 复活。
-2. `feature/outpatient-inventory`、`feature/programcell`、`feature/yunwei-tool` 都可删，只保留本报告里的复活路径。
-3. 删除或归档其他分支。
-4. 对重复分支直接去重：
-   - `feature/dingtalklib`
-   - `feature/fileexplorer`
-5. 如果保留 `MegaRepo`，让 `main` 只当索引，不再继续塞代码。
+2. 旧远端分支已删除；需要恢复时从 `archive/revival-docs` 文档或本地 bundle 查 tip。
+3. 如果保留 `MegaRepo`，让 `main` 只当索引，不再继续塞代码。

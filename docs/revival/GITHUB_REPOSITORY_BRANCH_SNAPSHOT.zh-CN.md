@@ -17,7 +17,7 @@
 | 仓库 | 可见性 | 默认分支 | 远端分支 | 判断 |
 | --- | --- | --- | --- | --- |
 | `PITS-Personal-Itinerary-Tracking-System` | public | `main` | `codex/merge-pits-branches`, `main`, `trae/solo-agent-B7FdSg`, `trae/solo-agent-SrlJMZ` | 保留；`codex/merge-pits-branches` 已吸收两个 `trae` 分支，作为后续开发入口 |
-| `MegaRepo` | public | `main` | `archive/localdts`, `archive/mindmap`, `feature/autoticket`, `feature/autowebclient`, `feature/blazor-trae`, `feature/dbconnection-wpf`, `feature/dingtalklib`, `feature/diting-utils`, `feature/fileexplorer`, `feature/outpatient-inventory`, `feature/programcell`, `feature/tools-components`, `feature/universal-invoice`, `feature/yunwei-tool`, `main`, `trae/solo-agent-edXDXQ` | 分支归档仓，已单独分析 |
+| `MegaRepo` | public | `main` | `archive/revival-docs`, `main` | 已清理旧远端分支；复活文档保存在 `archive/revival-docs` |
 | `SpaceSniffMax` | private | `main` | `main`, `master` | 保留；完整内容在 `master` |
 | `Jvedio` | public | `master` | `dev-5.0`, `kvdeio`, `master` | 保留；两个非默认分支都有价值 |
 | `SSSSR` | public | `main` | `main` | 保留 |

@@ -16,6 +16,10 @@
 
 其余分支按 `MEGAREPO_BRANCH_AUDIT.zh-CN.md` 的结论处理即可。
 
+2026-07-02 已新增并推送 `archive/revival-docs` 分支保存本轮复活文档；`MegaRepo` 旧 `archive/*`、`feature/*`、`trae/*` 远端分支已清理。删除前完整备份在：
+
+`D:\Code\githubDown\_github-delete-backups\MegaRepo-before-branch-cleanup-20260702.bundle`
+
 ## `archive/localdts`
 
 结论：不再从 `MegaRepo` 复活。独立私有仓 `LocalDts` 已存在，后续以 `LocalDts` 为准。
@@ -176,3 +180,5 @@
 - `MEGAREPO_REVIVAL_NOTES.zh-CN.md`
 
 真要复活代码，优先从独立仓取，不从 `MegaRepo` 分支取。
+
+如果必须恢复已删除的 `MegaRepo` 远端分支，先从 bundle 还原，再按 `MEGAREPO_BRANCH_TIPS_BEFORE_DELETE.zh-CN.md` 中记录的 tip 建分支。

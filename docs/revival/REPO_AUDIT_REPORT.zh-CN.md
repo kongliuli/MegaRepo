@@ -123,7 +123,7 @@ Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本�
    - `2025CodeRepository`：推送清理提交。
    - `Feishu.Context`：推送已合并后的 `main`。
    - `yf.pt`：推送已合并后的 `main`。
-2. `MegaRepo`：不再优先拆分支；`archive/localdts` 以独立私有仓 `LocalDts` 为准，其余分支按文档留想法即可。
+2. `MegaRepo`：已新增 `archive/revival-docs` 分支保存复活文档，并清理旧远端分支；当前远端只保留 `main` 和 `archive/revival-docs`。
 3. 待你明确确认后可清理的私有仓：
    - `vibe-coding-platform`
    - `chatbot`
@@ -138,6 +138,7 @@ Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本�
 - 确认 `Jvedio` 的 `kvdeio`、`dev-5.0` 分支存在，并检查与 `master` 的差异规模；已形成 `JVEDIO_BRANCH_NOTE.zh-CN.md`。
 - 通过 GitHub CLI 读取到 23 个仓库，其中 9 个私有仓；已对当前可见仓库形成远端分支快照。
 - 确认 `DataForge.Core` 的 `trae` 分支已被 `main` 吸收；确认 `PITS` 两个 `trae` 分支已被 `codex/merge-pits-branches` 吸收。
+- 已为 `MegaRepo` 创建并推送 `archive/revival-docs` 分支，删除 15 个已留档旧远端分支。
 - 已删除 `SvgManager`、`avalonia-browser`、`autoCrafter`、`VibeSkills` 的本地目录，远端未删除。
 - 已合并 `yf.pt` 的真实代码分支，并执行 `dotnet restore` / `dotnet build`，构建通过。
 - 做过轻量密钥关键词扫；未发现明确真实泄漏，主要是普通变量名、公钥 token、依赖元数据等误报。

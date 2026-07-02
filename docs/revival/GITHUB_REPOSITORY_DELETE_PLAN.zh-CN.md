@@ -57,9 +57,14 @@
 
 脚本会逐个检查本地保留是否存在。没有本地保留时会停止，不删除远端。
 
-## MegaRepo 分支删除
+## MegaRepo 分支删除结果
 
-`MegaRepo` 远端分支删除前，先保留：
+`MegaRepo` 远端分支已清理完成。当前 GitHub 只保留：
+
+- `main`
+- `archive/revival-docs`
+
+删除前已保留：
 
 - `D:\Code\githubDown\_github-delete-backups\MegaRepo-before-branch-cleanup-20260702.bundle`
 - `MegaRepo` 新分支 `archive/revival-docs`

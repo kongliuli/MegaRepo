@@ -48,7 +48,7 @@
 | `xinglin` | 活跃项目 |
 | `MediaManager` | 活跃项目 |
 | `Jvedio` | 保留，`dev-5.0` / `kvdeio` 分支有明显有效改动，见 `JVEDIO_BRANCH_NOTE.zh-CN.md` |
-| `MegaRepo` | 先保留，等待处理 `archive/localdts` 等分支 |
+| `MegaRepo` | 保留，旧远端分支已清理；复活文档在 `archive/revival-docs` |
 | `2025CodeRepository` | 临时留档，已精简 |
 
 ## 删除方式
