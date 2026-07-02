@@ -36,14 +36,15 @@
 
 ## 执行方式
 
-当前 `gh auth status` 显示 token scope 包含：
+当前 `gh auth status` 显示 token scope 已包含：
 
+- `delete_repo`
 - `gist`
 - `read:org`
 - `repo`
 - `workflow`
 
-删除仓库通常还需要 `delete_repo` scope。执行前先刷新授权：
+删除仓库权限已就绪。若以后授权失效，再刷新：
 
 ```powershell
 & 'C:\Program Files\GitHub CLI\gh.exe' auth refresh -h github.com -s delete_repo
