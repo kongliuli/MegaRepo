@@ -42,18 +42,19 @@ MegaRepo/
 | feature/universal-invoice | 通用票据处理工具（迁移自 Practice-Projects-Hub） | https://github.com/kongliuli/Practice-Projects-Hub | ⚠️ 在文档中引用，但该仓库当前不可通过 API 访问（可能私有/已删除/迁移） |
 | feature/outpatient-inventory | 门诊库存管理系统（迁移自 NewRepoBySiHuo） | https://github.com/kongliuli/NewRepoBySiHuo | ⚠️ 在文档中引用，但该仓库当前不可通过 API 访问（可能私有/已删除/迁移） |
 | feature/tools-components | 工具组件合集（SuffixChange.Form、NewTextByCard、shared-tools） | https://github.com/kongliuli/moyu  / https://github.com/kongliuli/Practice-Projects-Hub | ⚠️ moyu / Practice-Projects-Hub 在文档中被引用，但当前不可通过 API 访问 |
-| feature/autoticket | 自动购票系统 | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
-| feature/autowebclient | 自动化 Web 客户端（CEFSharp） | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
-| feature/dingtalklib | 钉钉接口封装 | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
-| feature/diting-utils | 通用工具库 | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
-| feature/programcell | Blazor 项目管理工具 | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
-| feature/blazor-trae | Blazor Trae 项目 | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
-| feature/yunwei-tool | 运维工具 | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
-| feature/dbconnection-wpf | 数据库连接工具（WPF） | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
-| feature/fileexplorer | 文件资源管理器（WPF） | https://github.com/kongliuli/2025CodeRepository | ✅ 来源仓库存在（2025CodeRepository） |
+| feature/autoticket | 自动购票系统 | https://github.com/kongliuli/2025CodeRepository | 历史文档留痕；当前源仓已不保留代码 |
+| feature/autowebclient | 自动化 Web 客户端（CEFSharp） | https://github.com/kongliuli/2025CodeRepository | 历史文档留痕；当前源仓已不保留代码 |
+| feature/dingtalklib | 钉钉接口封装 | https://github.com/kongliuli/2025CodeRepository | 已归档到 `tmp-repos/2025CodeRepository` |
+| feature/diting-utils | 通用工具库 | https://github.com/kongliuli/2025CodeRepository | 历史文档留痕；当前源仓已不保留代码 |
+| feature/programcell | Blazor 项目管理工具 | https://github.com/kongliuli/2025CodeRepository | 历史文档留痕；当前源仓已不保留代码 |
+| feature/blazor-trae | Blazor Trae 项目 | https://github.com/kongliuli/2025CodeRepository | 历史文档留痕；当前源仓已不保留代码 |
+| feature/yunwei-tool | 运维工具 | https://github.com/kongliuli/2025CodeRepository | 历史文档留痕；当前源仓已不保留代码 |
+| feature/dbconnection-wpf | 数据库连接工具（WPF） | https://github.com/kongliuli/2025CodeRepository | 历史文档留痕；当前源仓已不保留代码 |
+| feature/fileexplorer | 文件资源管理器（WPF） | https://github.com/kongliuli/2025CodeRepository | 已归档到 `tmp-repos/2025CodeRepository` |
 | feature/auto* (其他) | 其它 feature/* 分支（若未列出） | 参见各分支注释 | — |
 | archive/localdts | LocalDts 仓库归档 | https://github.com/kongliuli/LocalDts | ⚠️ 该仓库为私有或已归档（当前 API 返回不可访问） |
 | archive/mindmap | MindMap 仓库归档 | https://github.com/kongliuli/MindMap | ⚠️ 在文档中引用，但该仓库当前不可通过 API 访问（可能私有/已删除） |
+| archive/2025-code-repository | 2025CodeRepository 仓库归档 | https://github.com/kongliuli/2025CodeRepository | 已归档 FileExplorer / DingTalkLib / xfyun 三项 |
 | trae/solo-agent-edXDXQ | Trae Solo agent 工作分支（内部） | - | ✅ 已存在 |
 
 说明：上表中的“状态”是我通过 GitHub API 检查后得出的结论：
@@ -72,7 +73,7 @@ MegaRepo/
 | Practice-Projects-Hub | https://github.com/kongliuli/Practice-Projects-Hub | ❌ 未找到 | 文档中设为迁移/重构目标 |
 | NewRepoBySiHuo | https://github.com/kongliuli/NewRepoBySiHuo | ❌ 未找到 | 文档中标为已归档，核心迁移到 Practice-Projects-Hub |
 | LocalDts | https://github.com/kongliuli/LocalDts | ❌ 私有/不可访问（在你的账号中列出为 private） | README 中有 archive/localdts 分支对应说明 |
-| 2025CodeRepository | https://github.com/kongliuli/2025CodeRepository | ✅ 可访问（private，但已列出） | README 中多个 feature/* 标注来自该仓库 |
+| 2025CodeRepository | https://github.com/kongliuli/2025CodeRepository | 已归档到 MegaRepo | 当前实物仅 FileExplorer / DingTalkLib / xfyun；旧 feature 文档保留为历史记录 |
 
 ## 我已做的同步性修正
 

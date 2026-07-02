@@ -1,0 +1,19 @@
+﻿<Application x:Class="FileExplorer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FileExplorer"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Define your dynamic resources here -->
+            <SolidColorBrush x:Key="MaterialDesignPaper" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="MaterialDesignBody" Color="#000000" />
+            <SolidColorBrush x:Key="MaterialDesignBackground" Color="#F5F5F5" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
