@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>TFT Assistant Background</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // 检查Overwolf API是否可用
+        if (typeof overwolf === 'undefined') {
+            console.error('Overwolf API not available');
+            return;
+        }
+
+        // 初始化Overwolf API
+        function initOverwolf() {
+            console.log('Initializing Overwolf API...');
+            
+            // 注册游戏启动事件
+            overwolf.games.onGameLaunched.addListener(onGameLaunched);
+            
+            // 注册游戏关闭事件
+            overwolf.games.onGameClosed.addListener(onGameClosed);
+            
+            // 注册游戏信息更新事件
+            overwolf.games.events.onInfoUpdates2.addListener(onInfoUpdate);
+            
+            // 注册游戏事件
+            overwolf.games.events.onNewEvents.addListener(onGameEvent);
+            
+            // 检查当前运行的游戏
+            overwolf.games.getRunningGameInfo(onRunningGameInfo);
+            
+            console.log('Overwolf API initialized');
+        }
+
+        // 游戏启动事件
+        function onGameLaunched(info) {
+            console.log('Game launched:', info);
+            if (info && info.id === 5426) { // 5426 is TFT game ID
+                console.log('TFT detected, connecting...');
+                connectToGame();
+            }
+        }
+
+        // 游戏关闭事件
+        function onGameClosed(info) {
+            console.log('Game closed:', info);
+            if (info && info.id === 5426) {
+                console.log('TFT closed, disconnecting...');
+                disconnectFromGame();
+            }
+        }
+
+        // 当前运行的游戏信息
+        function onRunningGameInfo(info) {
+            console.log('Running game info:', info);
+            if (info && info.id === 5426) {
+                console.log('TFT is running, connecting...');
+                connectToGame();
+            }
+        }
+
+        // 连接到游戏
+        function connectToGame() {
+            console.log('Connecting to TFT...');
+            
+            // 获取游戏状态
+            overwolf.games.events.setRequiredFeatures([
+                'live_client_data',
+                'match_info',
+                'game_info',
+                'match_state'
+            ], function(result) {
+                if (result.success) {
+                    console.log('Required features set successfully');
+                    
+                    // 开始接收游戏事件
+                    overwolf.games.events.start();
+                    console.log('Started receiving game events');
+                } else {
+                    console.error('Failed to set required features:', result.error);
+                }
+            });
+        }
+
+        // 断开游戏连接
+        function disconnectFromGame() {
+            console.log('Disconnecting from TFT...');
+            overwolf.games.events.stop();
+        }
+
+        // 游戏信息更新事件
+        function onInfoUpdate(info) {
+            console.log('Info update received');
+            if (info && info.liveClientData) {
+                // 发送游戏状态到后端
+                sendMessageToBackend('overwolf_info_update', info);
+            }
+        }
+
+        // 游戏事件
+        function onGameEvent(events) {
+            console.log('Game events received:', events.length);
+            if (events && events.length > 0) {
+                // 发送游戏事件到后端
+                sendMessageToBackend('overwolf_game_event', events);
+            }
+        }
+
+        // 发送消息到后端
+        function sendMessageToBackend(type, data) {
+            const message = {
+                type: type,
+                payload: data
+            };
+            
+            // 这里需要实现与后端的通信机制
+            // 暂时使用console.log模拟
+            console.log('Sending message to backend:', message);
+            
+            // 实际项目中，这里应该使用WebSocket或其他通信方式
+        }
+
+        // 页面加载完成后初始化
+        window.addEventListener('load', initOverwolf);
+    </script>
+</body>
+</html>

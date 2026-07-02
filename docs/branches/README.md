@@ -8,9 +8,9 @@
 |------|------|------|
 | 主分支 | 1 | main - 主分支 |
 | 功能分支 | 13 | feature/* - 各功能项目分支 |
-| 归档分支 | 3 | archive/* - 已归档项目分支 |
+| 归档分支 | 4 | archive/* - 已归档项目分支 |
 | 内部分支 | 1 | trae/* - Trae AI 工作分支 |
-| **总计** | **18** | |
+| **总计** | **19** | |
 
 ---
 
@@ -70,6 +70,7 @@
 | archive/localdts | LocalDts 数据迁移工具 | .NET 8.0, C#, WPF, EF Core | [查看文档](archive-localdts.md) | 项目已完成或暂停 |
 | archive/mindmap | MindMap 思维导图工具 | Web/JavaScript | [查看文档](archive-mindmap.md) | 项目已完成或暂停 |
 | archive/2025-code-repository | 2025CodeRepository 代码碎片归档 | .NET 8.0, C#, WPF, WinForms | [查看文档](archive-2025coderepository.md) | 源仓已瘦身为 FileExplorer / DingTalkLib / xfyun 三项 |
+| archive/tftassistant | TFTAssistant 游戏辅助归档 | .NET, C#, HTML/CSS/JavaScript, SQLite, Overwolf | [查看文档](archive-tftassistant.md) | 源仓归档到 MegaRepo 后删除 |
 
 ---
 
@@ -103,6 +104,7 @@
 | 来源仓库 | 分支数量 | 分支列表 |
 |----------|----------|----------|
 | 2025CodeRepository | 3 retained assets | FileExplorer, DingTalkLib, xfyun |
+| TFTAssistant | 1 archive | archive/tftassistant |
 | Practice-Projects-Hub | 2 | universal-invoice, tools-components |
 | NewRepoBySiHuo | 1 | outpatient-inventory |
 | LocalDts | 1 | archive/localdts |

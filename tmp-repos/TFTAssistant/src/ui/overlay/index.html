@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>TFT Assistant Overlay</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/overlay.css">
+</head>
+<body>
+    <div id="app" class="overlay-container">
+        <div class="overlay-header">
+            <span class="overlay-title">TFT Assistant</span>
+            <button class="btn-minimize" id="btn-minimize">—</button>
+        </div>
+
+        <div class="tab-bar">
+            <button class="tab active" data-tab="board">棋盘</button>
+            <button class="tab" data-tab="items">装备</button>
+            <button class="tab" data-tab="comps">阵容</button>
+            <button class="tab" data-tab="econ">经济</button>
+            <button class="tab" data-tab="analytics">大数据</button>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-panel active" id="panel-board">
+                <div class="panel-content">
+                    <h3>棋盘追踪</h3>
+                    <div class="unit-card">
+                        <span class="unit-name">示例英雄</span>
+                        <span class="unit-stars">★★★</span>
+                        <div class="unit-items">
+                            <div class="item-icon"></div>
+                            <div class="item-icon"></div>
+                            <div class="item-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="panel-items">
+                <div class="panel-content">
+                    <h3>装备分析</h3>
+                    <div class="disclaimer">
+                        <span class="disclaimer-icon">⚠️</span>
+                        <span class="disclaimer-text">以下数据为历史统计，仅供参考</span>
+                    </div>
+                    
+                    <h4>装备推荐</h4>
+                    <div class="item-recommendations" id="item-recommendations">
+                        <!-- 装备推荐内容将通过 JavaScript 动态生成 -->
+                    </div>
+                    
+                    <h4>合成路径</h4>
+                    <div class="synthesis-paths" id="synthesis-paths">
+                        <!-- 合成路径建议将通过 JavaScript 动态生成 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="panel-comps">
+                <div class="panel-content">
+                    <h3>阵容建议</h3>
+                    <div class="comp-card top">
+                        <span class="comp-name">推荐阵容</span>
+                        <span class="comp-score">92</span>
+                        <div class="comp-units">
+                            <span class="comp-unit owned">英雄1</span>
+                            <span class="comp-unit owned">英雄2</span>
+                            <span class="comp-unit missing">英雄3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="panel-econ">
+                <div class="panel-content">
+                    <h3>经济提示</h3>
+                    <div class="econ-hint urgency-medium">
+                        <div class="econ-title">前期运营</div>
+                        <div class="econ-description">尽量保持 50 金吃利息</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="panel-analytics">
+                <div class="panel-content">
+                    <h3>大数据分析</h3>
+                    <div class="disclaimer">
+                        <span class="disclaimer-icon">⚠️</span>
+                        <span class="disclaimer-text">以下数据为历史统计，仅供参考</span>
+                    </div>
+                    <div class="analytics-summary">
+                        <div class="analytics-card">
+                            <div class="analytics-value" id="analytics-win-rate">--%</div>
+                            <div class="analytics-label">平均胜率</div>
+                        </div>
+                        <div class="analytics-card">
+                            <div class="analytics-value" id="analytics-top4-rate">--%</div>
+                            <div class="analytics-label">前四率</div>
+                        </div>
+                        <div class="analytics-card">
+                            <div class="analytics-value" id="analytics-popular-comp">--</div>
+                            <div class="analytics-label">热门阵容</div>
+                        </div>
+                    </div>
+                    <h4>阵容胜率排行</h4>
+                    <div class="analytics-list" id="analytics-comp-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay-footer">
+            <span id="connection-status" class="status-dot disconnected"></span>
+            <span id="round-info">--</span>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

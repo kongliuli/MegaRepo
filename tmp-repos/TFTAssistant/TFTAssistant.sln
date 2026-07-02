@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{95A3BC69-A0AD-4F61-B73F-F8F41C3ADF71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFTAssistant.Core", "src\TFTAssistant.Core\TFTAssistant.Core.csproj", "{70E0F1C6-92D1-4907-815C-2F10AF9FB44F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFTAssistant.Overwolf", "src\TFTAssistant.Overwolf\TFTAssistant.Overwolf.csproj", "{772556F4-B17B-46D7-B1E9-61C5CF09594E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFTAssistant.App", "src\TFTAssistant.App\TFTAssistant.App.csproj", "{06C581A0-7C6F-4377-B1A7-A6A1A119915B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4E9C80A0-03C6-43DC-98D3-899FE5C40F55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFTAssistant.Core.Tests", "tests\TFTAssistant.Core.Tests\TFTAssistant.Core.Tests.csproj", "{ABB123B1-5D8B-40DE-9235-E11A4FFB0A0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70E0F1C6-92D1-4907-815C-2F10AF9FB44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E0F1C6-92D1-4907-815C-2F10AF9FB44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E0F1C6-92D1-4907-815C-2F10AF9FB44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E0F1C6-92D1-4907-815C-2F10AF9FB44F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{772556F4-B17B-46D7-B1E9-61C5CF09594E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772556F4-B17B-46D7-B1E9-61C5CF09594E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772556F4-B17B-46D7-B1E9-61C5CF09594E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772556F4-B17B-46D7-B1E9-61C5CF09594E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C581A0-7C6F-4377-B1A7-A6A1A119915B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C581A0-7C6F-4377-B1A7-A6A1A119915B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C581A0-7C6F-4377-B1A7-A6A1A119915B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C581A0-7C6F-4377-B1A7-A6A1A119915B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB123B1-5D8B-40DE-9235-E11A4FFB0A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB123B1-5D8B-40DE-9235-E11A4FFB0A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB123B1-5D8B-40DE-9235-E11A4FFB0A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB123B1-5D8B-40DE-9235-E11A4FFB0A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70E0F1C6-92D1-4907-815C-2F10AF9FB44F} = {95A3BC69-A0AD-4F61-B73F-F8F41C3ADF71}
+		{772556F4-B17B-46D7-B1E9-61C5CF09594E} = {95A3BC69-A0AD-4F61-B73F-F8F41C3ADF71}
+		{06C581A0-7C6F-4377-B1A7-A6A1A119915B} = {95A3BC69-A0AD-4F61-B73F-F8F41C3ADF71}
+		{ABB123B1-5D8B-40DE-9235-E11A4FFB0A0D} = {4E9C80A0-03C6-43DC-98D3-899FE5C40F55}
+	EndGlobalSection
+EndGlobal

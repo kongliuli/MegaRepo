@@ -55,6 +55,7 @@ MegaRepo/
 | archive/localdts | LocalDts 仓库归档 | https://github.com/kongliuli/LocalDts | ⚠️ 该仓库为私有或已归档（当前 API 返回不可访问） |
 | archive/mindmap | MindMap 仓库归档 | https://github.com/kongliuli/MindMap | ⚠️ 在文档中引用，但该仓库当前不可通过 API 访问（可能私有/已删除） |
 | archive/2025-code-repository | 2025CodeRepository 仓库归档 | https://github.com/kongliuli/2025CodeRepository | 已归档 FileExplorer / DingTalkLib / xfyun 三项 |
+| archive/tftassistant | TFTAssistant 仓库归档 | https://github.com/kongliuli/TFTAssistant | 已归档源码、文档、UI、规格和测试 |
 | trae/solo-agent-edXDXQ | Trae Solo agent 工作分支（内部） | - | ✅ 已存在 |
 
 说明：上表中的“状态”是我通过 GitHub API 检查后得出的结论：
@@ -74,6 +75,7 @@ MegaRepo/
 | NewRepoBySiHuo | https://github.com/kongliuli/NewRepoBySiHuo | ❌ 未找到 | 文档中标为已归档，核心迁移到 Practice-Projects-Hub |
 | LocalDts | https://github.com/kongliuli/LocalDts | ❌ 私有/不可访问（在你的账号中列出为 private） | README 中有 archive/localdts 分支对应说明 |
 | 2025CodeRepository | https://github.com/kongliuli/2025CodeRepository | 已归档到 MegaRepo | 当前实物仅 FileExplorer / DingTalkLib / xfyun；旧 feature 文档保留为历史记录 |
+| TFTAssistant | https://github.com/kongliuli/TFTAssistant | 已归档到 MegaRepo | 源码位于 `tmp-repos/TFTAssistant`；跳过本地安装包 `packages-microsoft-prod.deb` |
 
 ## 我已做的同步性修正
 

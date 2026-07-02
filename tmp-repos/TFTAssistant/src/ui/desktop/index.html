@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>TFT Assistant - 桌面</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="app" class="desktop-container">
+        <div class="desktop-header">
+            <span class="desktop-title">TFT Assistant</span>
+            <div class="version-info">
+                <select id="version-selector" class="version-selector">
+                    <option value="14.1">14.1</option>
+                    <option value="14.2">14.2</option>
+                    <option value="14.3" selected>14.3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="tab-bar">
+            <button class="tab active" data-tab="history">历史记录</button>
+            <button class="tab" data-tab="stats">统计分析</button>
+            <button class="tab" data-tab="analytics">大数据分析</button>
+            <button class="tab" data-tab="settings">设置</button>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-panel active" id="panel-history">
+                <div class="panel-content">
+                    <h3>对局历史</h3>
+                    <div class="history-list" id="history-list">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="panel-stats">
+                <div class="panel-content">
+                    <div class="disclaimer">
+                        <span class="disclaimer-icon">⚠️</span>
+                        <span class="disclaimer-text">以下数据为历史统计，仅供参考，不代表实时预测</span>
+                    </div>
+                    
+                    <h3>总体胜率统计</h3>
+                    <div class="overall-stats">
+                        <div class="stat-card">
+                            <div class="stat-value" id="total-matches">--</div>
+                            <div class="stat-label">总对局数</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="win-rate">--%</div>
+                            <div class="stat-label">胜率</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="top4-rate">--%</div>
+                            <div class="stat-label">前四率</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="top1-rate">--%</div>
+                            <div class="stat-label">吃鸡率</div>
+                        </div>
+                    </div>
+
+                    <h3>胜率趋势图</h3>
+                    <div class="chart-container">
+                        <canvas id="win-rate-chart"></canvas>
+                    </div>
+
+                    <h3>阵容胜率</h3>
+                    <div class="comp-stats-list" id="comp-stats-list">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="panel-analytics">
+                <div class="panel-content">
+                    <div class="disclaimer">
+                        <span class="disclaimer-icon">⚠️</span>
+                        <span class="disclaimer-text">以下数据为历史统计，仅供参考，不代表实时预测</span>
+                    </div>
+                    
+                    <h3>大数据分析</h3>
+                    
+                    <div class="analytics-controls">
+                        <div class="control-group">
+                            <label>数据筛选</label>
+                            <select id="analytics-filter" class="filter-selector">
+                                <option value="all">全部数据</option>
+                                <option value="recent">最近30天</option>
+                                <option value="season">当前赛季</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>排序方式</label>
+                            <select id="analytics-sort" class="sort-selector">
+                                <option value="winRate">胜率</option>
+                                <option value="matches">对局数</option>
+                                <option value="top4Rate">前四率</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="analytics-overview">
+                        <div class="overview-card">
+                            <div class="overview-value" id="analytics-total-matches">--</div>
+                            <div class="overview-label">总对局数</div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="overview-value" id="analytics-avg-win-rate">--%</div>
+                            <div class="overview-label">平均胜率</div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="overview-value" id="analytics-avg-top4-rate">--%</div>
+                            <div class="overview-label">平均前四率</div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="overview-value" id="analytics-avg-placement">--</div>
+                            <div class="overview-label">平均排名</div>
+                        </div>
+                    </div>
+
+                    <h4>阵容强度评估</h4>
+                    <div class="chart-container">
+                        <canvas id="comp-strength-chart"></canvas>
+                    </div>
+
+                    <h4>版本Meta分析</h4>
+                    <div class="chart-container">
+                        <canvas id="meta-analysis-chart"></canvas>
+                    </div>
+
+                    <h4>阵容详细分析</h4>
+                    <div class="analytics-table-container">
+                        <table class="analytics-table">
+                            <thead>
+                                <tr>
+                                    <th>阵容名称</th>
+                                    <th>对局数</th>
+                                    <th>胜率</th>
+                                    <th>前四率</th>
+                                    <th>平均排名</th>
+                                </tr>
+                            </thead>
+                            <tbody id="analytics-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4>装备分析</h4>
+                    <div class="equipment-analysis" id="equipment-analysis">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="panel-settings">
+                <div class="panel-content">
+                    <h3>设置</h3>
+                    
+                    <div class="settings-section">
+                        <h4>数据管理</h4>
+                        <div class="setting-item">
+                            <label>游戏版本</label>
+                            <select id="settings-version-selector" class="version-selector">
+                                <option value="14.1">14.1</option>
+                                <option value="14.2">14.2</option>
+                                <option value="14.3" selected>14.3</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>语言</label>
+                            <select id="language-selector" class="version-selector">
+                                <option value="zh">中文</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>主题</label>
+                            <select id="theme-selector" class="version-selector">
+                                <option value="dark">深色模式</option>
+                                <option value="light">亮色模式</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h4>缓存管理</h4>
+                        <div class="cache-info">
+                            <div class="cache-item">
+                                <span class="cache-label">统计数据缓存</span>
+                                <span class="cache-size" id="stats-cache-size">0 KB</span>
+                            </div>
+                            <div class="cache-item">
+                                <span class="cache-label">静态数据缓存</span>
+                                <span class="cache-size" id="static-cache-size">0 KB</span>
+                            </div>
+                        </div>
+                        <div class="cache-actions">
+                            <button class="btn btn-secondary" id="btn-clear-stats-cache">清除统计缓存</button>
+                            <button class="btn btn-secondary" id="btn-clear-static-cache">清除静态数据缓存</button>
+                            <button class="btn btn-danger" id="btn-clear-all-cache">清除所有缓存</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h4>合规声明</h4>
+                        <div class="compliance-text">
+                            <p>本工具遵守 Riot 第三方工具政策，不提供以下功能：</p>
+                            <ul>
+                                <li>对手棋盘侦察</li>
+                                <li>实时动态操作指令</li>
+                                <li>实时胜率预测</li>
+                                <li>英雄池追踪</li>
+                            </ul>
+                            <p>所有统计数据为历史记录，仅供参考。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="desktop-footer">
+            <span class="footer-text">TFT Assistant 历史数据分析工具</span>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

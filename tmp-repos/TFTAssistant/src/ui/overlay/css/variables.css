@@ -1,0 +1,39 @@
+:root {
+    /* 深色主题 */
+    --bg-primary: rgba(10, 15, 30, 0.85);
+    --bg-secondary: rgba(20, 30, 50, 0.9);
+    --bg-hover: rgba(40, 60, 100, 0.8);
+    --text-primary: #e0e6f0;
+    --text-secondary: #8899b0;
+    --accent: #4fc3f7;
+    --accent-dim: rgba(79, 195, 247, 0.3);
+    --success: #66bb6a;
+    --warning: #ffa726;
+    --danger: #ef5350;
+    --border: rgba(79, 195, 247, 0.2);
+    --cost-1: #8899aa;
+    --cost-2: #66bb6a;
+    --cost-3: #4fc3f7;
+    --cost-4: #ce93d8;
+    --cost-5: #ffa726;
+}
+
+/* 亮色主题 */
+:root.light-theme {
+    --bg-primary: rgba(248, 249, 250, 0.95);
+    --bg-secondary: rgba(233, 236, 239, 0.95);
+    --bg-hover: rgba(216, 217, 219, 0.8);
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --accent: #007bff;
+    --accent-dim: rgba(0, 123, 255, 0.2);
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --border: rgba(0, 123, 255, 0.2);
+    --cost-1: #6c757d;
+    --cost-2: #28a745;
+    --cost-3: #007bff;
+    --cost-4: #6f42c1;
+    --cost-5: #ffc107;
+}

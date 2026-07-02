@@ -1,0 +1,94 @@
+{
+  "manifest_version": 1,
+  "app_name": "TFT Assistant",
+  "type": "Extension",
+  "description": "个人云顶之弈辅助工具",
+  "version": "0.1.0",
+  "author": "Your Name",
+  "permissions": [
+    "GameInfo",
+    "Hotkeys",
+    "Desktop",
+    "Extensions"
+  ],
+  "game_events": [5426],
+  "features": [
+    "live_client_data",
+    "match_info",
+    "game_info",
+    "match_state"
+  ],
+  "icon": "src/ui/icon.png",
+  "icon_gray": "src/ui/icon_gray.png",
+  "windows": [
+    {
+      "name": "overlay",
+      "window_type": "Overwolf",
+      "title": "TFT Assistant Overlay",
+      "transparent": true,
+      "resizable": false,
+      "size": {
+        "width": 320,
+        "height": 600
+      },
+      "min_size": {
+        "width": 280,
+        "height": 400
+      },
+      "grab_focus_on_click": false,
+      "in_game_only": true,
+      "show_in_taskbar": false,
+      "file": "src/ui/overlay/index.html"
+    },
+    {
+      "name": "desktop",
+      "window_type": "Desktop",
+      "title": "TFT Assistant",
+      "transparent": false,
+      "resizable": true,
+      "size": {
+        "width": 900,
+        "height": 700
+      },
+      "min_size": {
+        "width": 700,
+        "height": 500
+      },
+      "show_in_taskbar": true,
+      "file": "src/ui/desktop/index.html"
+    },
+    {
+      "name": "background",
+      "window_type": "Background",
+      "transparent": false,
+      "grab_focus_on_click": false,
+      "show_in_taskbar": false,
+      "file": "src/ui/background/index.html"
+    }
+  ],
+  "hotkeys": {
+    "toggle_overlay": {
+      "title": "显示/隐藏覆盖层",
+      "action": "toggle_overlay",
+      "default_keys": [
+        "Ctrl+Shift+T"
+      ]
+    }
+  },
+  "launch_events": [
+    {
+      "event": "GameLaunched",
+      "game_id": 5426,
+      "wait_for_game_info": true,
+      "min_game_version": "",
+      "max_game_version": ""
+    }
+  ],
+  "block_window_list": [],
+  "externally_connectable": {
+    "matches": ["https://localhost:*/*"]
+  },
+  "developer": {
+    "install_source": "dev"
+  }
+}
