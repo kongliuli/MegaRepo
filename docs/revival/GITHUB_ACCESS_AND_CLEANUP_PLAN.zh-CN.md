@@ -86,6 +86,7 @@ GitHub MCP 当前未暴露私有仓库；GitHub CLI 登录后可以看到私有�
 | --- | --- |
 | `REPO_AUDIT_REPORT.zh-CN.md` | 总体仓库盘点 |
 | `GITHUB_REPOSITORY_BRANCH_SNAPSHOT.zh-CN.md` | 当前 GitHub 可见仓库和远端分支快照 |
+| `FULL_REPO_BRANCH_DISPOSITION.zh-CN.md` | 当前 16 个 GitHub 仓库逐分支作用、可删除性和处理方案 |
 | `BRANCH_IMPLEMENTATION_REVIEW.zh-CN.md` | 剩余分支是否有真实实现和提交的复查 |
 | `DATAFORGE_CORE_BRANCH_NOTE.zh-CN.md` | `DataForge.Core` 分支吸收关系说明 |
 | `PITS_BRANCH_NOTE.zh-CN.md` | `PITS` 合并分支和后续开发入口说明 |

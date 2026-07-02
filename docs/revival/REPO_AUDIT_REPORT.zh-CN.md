@@ -136,6 +136,7 @@ Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本�
 - 通过 GitHub CLI 读取到当前 16 个仓库，其中 6 个私有仓；已对当前可见仓库形成远端分支快照。
 - 确认 `DataForge.Core` 的 `trae` 分支已被 `main` 吸收；确认 `PITS` 两个 `trae` 分支已被 `codex/merge-pits-branches` 吸收。
 - 已形成 `BRANCH_IMPLEMENTATION_REVIEW.zh-CN.md`，区分剩余分支中的真实实现、已吸收分支和纯文档分支。
+- 已形成 `FULL_REPO_BRANCH_DISPOSITION.zh-CN.md`，覆盖当前 16 个 GitHub 仓库的逐分支作用、可删除性和处理方案。
 - 已为 `MegaRepo` 创建并推送 `archive/revival-docs` 分支，删除 15 个已留档旧远端分支。
 - 已删除 `SvgManager`、`avalonia-browser`、`autoCrafter`、`VibeSkills` 的本地目录；7 个删除候选的 GitHub 远端也已删除，mirror 均已保留。
 - 已合并 `yf.pt` 的真实代码分支，并执行 `dotnet restore` / `dotnet build`，构建通过。
