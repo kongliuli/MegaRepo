@@ -5,15 +5,17 @@
 
 ## GitHub CLI 结果
 
-通过 `gh repo list kongliuli --visibility private` 看到 9 个私有仓库：
+通过 `gh repo list kongliuli --visibility private` 初始看到 9 个私有仓库。
+
+2026-07-02 更新：`vibe-coding-platform`、`chatbot`、`autoTicket` 的 GitHub 远端已删除，本地目录和 mirror 备份保留。当前 GitHub 私有仓可见数为 6 个。
 
 | 仓库 | 语言 | 最近推送 | 本地状态 | 结论 |
 | --- | --- | --- | --- | --- |
 | `SpaceSniffMax` | - | 2026-06-30 | 已克隆 | 保留，以 `origin/master` 为有效主线 |
 | `LocalDts` | C# | 2026-05-06 | 已克隆 | 保留，价值高 |
-| `vibe-coding-platform` | TypeScript | 2026-04-21 | 已克隆 | 模板/参考，已留档，可删 |
-| `chatbot` | TypeScript | 2026-04-21 | 已克隆 | 模板/参考，已留档，可删 |
-| `autoTicket` | TypeScript | 2026-04-18 | 已克隆 | 自动票务方向，已留档，可删 |
+| `vibe-coding-platform` | TypeScript | 2026-04-21 | 本地目录 + mirror 保留，远端已删 | 模板/参考，已留档 |
+| `chatbot` | TypeScript | 2026-04-21 | 本地目录 + mirror 保留，远端已删 | 模板/参考，已留档 |
+| `autoTicket` | TypeScript | 2026-04-18 | 本地目录 + mirror 保留，远端已删 | 自动票务方向，已留档 |
 | `2025CodeRepository` | C# | 2026-04-13 | 已存在 | 已精简留档 |
 | `TFTAssistant` | C# | 2026-04-13 | 已克隆 | 游戏助手，按兴趣决定 |
 | `xinglin-core` | C# | 2026-02-15 | 已克隆 | 与杏林主线相关，保留 |

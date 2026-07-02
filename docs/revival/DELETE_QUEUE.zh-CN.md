@@ -20,15 +20,15 @@
 | `autoCrafter` | `D:\Code\githubDown\autoCrafter` | `AUTOCRAFTER_ARCHIVE_NOTE.zh-CN.md` | 已删除 |
 | `VibeSkills` | `D:\Code\githubDown\VibeSkills` | `VIBESKILLS_ARCHIVE_NOTE.zh-CN.md` | 已删除 |
 
-## 待明确确认删除
+## GitHub 远端已删除，本地保留
 
-如果要继续删除，请直接点名这三个本地目录，例如：`删除 vibe-coding-platform、chatbot、autoTicket 本地目录`。
+这些仓库的 GitHub 远端已删除，但本地保留还在。不要再删本地，除非确认 mirror 足够并另行点名。
 
 | 仓库 | 当前路径 | 状态 | 复活文档 | 删除前结论 |
 | --- | --- | --- | --- | --- |
-| `vibe-coding-platform` | `D:\Code\githubDown\vibe-coding-platform` | 目录存在 | `VIBE_CODING_PLATFORM_ARCHIVE_NOTE.zh-CN.md` | 可删 |
-| `chatbot` | `D:\Code\githubDown\chatbot` | 目录存在 | `CHATBOT_ARCHIVE_NOTE.zh-CN.md` | 可删 |
-| `autoTicket` | `D:\Code\githubDown\autoTicket` | 目录存在 | `AUTOTICKET_ARCHIVE_NOTE.zh-CN.md` | 可删 |
+| `vibe-coding-platform` | `D:\Code\githubDown\vibe-coding-platform` | 目录存在，mirror 存在，远端已删 | `VIBE_CODING_PLATFORM_ARCHIVE_NOTE.zh-CN.md` | 已完成远端删除 |
+| `chatbot` | `D:\Code\githubDown\chatbot` | 目录存在，mirror 存在，远端已删 | `CHATBOT_ARCHIVE_NOTE.zh-CN.md` | 已完成远端删除 |
+| `autoTicket` | `D:\Code\githubDown\autoTicket` | 目录存在，mirror 存在，远端已删 | `AUTOTICKET_ARCHIVE_NOTE.zh-CN.md` | 已完成远端删除 |
 
 ## 暂不删除
 
@@ -55,21 +55,13 @@
 
 只删除本地目录，不删除 GitHub 远端仓库。
 
-当前待确认候选共 3 个：
-
-```powershell
-Remove-Item -LiteralPath "D:\Code\githubDown\vibe-coding-platform" -Recurse -Force
-Remove-Item -LiteralPath "D:\Code\githubDown\chatbot" -Recurse -Force
-Remove-Item -LiteralPath "D:\Code\githubDown\autoTicket" -Recurse -Force
-```
-
-删除前我会再次校验路径都在 `D:\Code\githubDown` 下。
+当前没有待执行的本地删除候选。
 
 ## GitHub 可见范围复查
 
 当前 GitHub 连接复查结果：
 
 - GitHub connector/MCP 当前返回空仓库、空 installed accounts、空 installations。
-- GitHub CLI 可看到 23 个仓库，其中 9 个私有仓；已形成远端分支快照。
+- GitHub CLI 当前可看到 16 个仓库，其中 6 个私有仓；7 个删除候选的 GitHub 远端已删除。
 
 因此本轮清理基于本地仓库，以及 GitHub CLI 读取到的私有仓。

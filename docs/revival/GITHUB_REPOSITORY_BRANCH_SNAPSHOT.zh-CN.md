@@ -7,9 +7,9 @@
 
 当前以本机 GitHub CLI 为准：
 
-- 可见仓库：23 个。
-- public：14 个。
-- private：9 个。
+- 可见仓库：16 个。
+- public：10 个。
+- private：6 个。
 - Codex GitHub connector 当前仍返回空 installed accounts / installations / repositories。
 
 ## 分支快照
@@ -28,24 +28,27 @@
 | `MediaManager` | public | `main` | `main`, `trae/solo-agent-rLpN6W` | 活跃项目，保留 |
 | `LocalDts` | private | `main` | `main`, `trae/solo-agent-v64RLs` | 保留 |
 | `xinglin` | public | `main` | `chore/cleanup-scripts`, `feature/optimized-ui`, `gh-pages`, `gh-pages-deploy`, `github-deployment`, `housekeeping/cleanup-scripts-automation`, `main`, `master`, `trae/solo-agent-4r3beL`, `trae/solo-agent-IsgOw4`, `trae/solo-agent-Tw6Rsk`, `web-enhanced` | 活跃项目，保留 |
-| `vibe-coding-platform` | private | `main` | `main` | 待确认删除本地目录 |
-| `chatbot` | private | `main` | `main` | 待确认删除本地目录 |
-| `autoTicket` | private | `main` | `main`, `trae/solo-agent-4wA9Gt`, `trae/solo-agent-9WDg6n`, `trae/solo-agent-MHmYQC`, `trae/solo-agent-vYyGSS`, `trae/solo-agent-yczxWm` | 待确认删除本地目录；保留复活文档即可 |
-| `SvgManager` | public | `main` | `main` | 本地已删，远端未删 |
-| `autoCrafter` | public | `main` | `main`, `trae/solo-agent-ZNp5vq` | 本地已删，远端未删 |
 | `2025CodeRepository` | private | `main` | `main`, `trae/solo-agent-zK4A1G` | 本地已精简，后续再拆 |
 | `TFTAssistant` | private | `main` | `main` | 保留 |
 | `xinglin-core` | private | `master` | `master` | 保留 |
-| `VibeSkills` | public | `main` | `main` | 本地已删，远端未删 |
-| `avalonia-browser` | public | `main` | `main` | 本地已删，远端未删 |
 | `xinlingMain` | private | `main` | `main` | 先归档不删 |
 
 ## 清理含义
 
-当前没有发现新的漏克隆私有仓。真正还在本地、且已进入待确认删除队列的仓库仍是：
+当前没有发现新的漏克隆私有仓。
 
-- `vibe-coding-platform`
-- `chatbot`
-- `autoTicket`
+## 已删除 GitHub 远端仓库
 
-其他仓库要么活跃，要么存在非默认分支价值，要么已经删掉本地目录。
+这些仓库已从 GitHub 删除，但本地保留仍在：
+
+| 仓库 | 原可见性 | 本地保留 |
+| --- | --- | --- |
+| `SvgManager` | public | mirror：`_github-delete-backups\SvgManager.git` |
+| `avalonia-browser` | public | mirror：`_github-delete-backups\avalonia-browser.git` |
+| `autoCrafter` | public | mirror：`_github-delete-backups\autoCrafter.git` |
+| `VibeSkills` | public | mirror：`_github-delete-backups\VibeSkills.git` |
+| `vibe-coding-platform` | private | worktree + mirror：`_github-delete-backups\vibe-coding-platform.git` |
+| `chatbot` | private | worktree + mirror：`_github-delete-backups\chatbot.git` |
+| `autoTicket` | private | worktree + mirror：`_github-delete-backups\autoTicket.git` |
+
+其他仓库要么活跃，要么存在非默认分支价值，要么已经删掉 GitHub 远端并保留本地备份。

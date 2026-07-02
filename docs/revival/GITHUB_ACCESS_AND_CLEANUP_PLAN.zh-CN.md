@@ -9,7 +9,7 @@
 
 历史上 Codex GitHub MCP 曾直接可见 public owner 仓库；当前复核时 connector 返回空仓库、空 installed accounts、空 installations。因此后续仓库枚举以本机 `gh` CLI 为准。
 
-2026-07-02 复核：`gh` 当前可见 23 个仓库，其中 14 个 public、9 个 private。逐仓库远端分支快照见 `GITHUB_REPOSITORY_BRANCH_SNAPSHOT.zh-CN.md`。
+2026-07-02 复核：`gh` 当前可见 16 个仓库，其中 10 个 public、6 个 private。逐仓库远端分支快照见 `GITHUB_REPOSITORY_BRANCH_SNAPSHOT.zh-CN.md`。
 
 此前通过 connector 看到的 public 仓库：
 
@@ -47,7 +47,7 @@ GitHub MCP 当前未暴露私有仓库；GitHub CLI 登录后可以看到私有�
 - 早期 `owner,collaborator,organization_member` 组合查询只返回 14 个 public owner 仓库。
 - 当前复核时 connector 返回空仓库、空 `installed_accounts`、空 `installations`。
 - 本机已安装 `gh` CLI，且账号 `kongliuli` 的 `repo` scope 可读取私有仓。
-- GitHub CLI 当前能看到 23 个仓库，其中 9 个私有仓；私有仓均已克隆或本地已存在。
+- GitHub CLI 当前能看到 16 个仓库，其中 6 个私有仓。
 - GitHub connector/MCP 仍未暴露 installed accounts / installations，所以 connector 查询结果不能代表全部仓库。
 
 所以这里是“Codex GitHub MCP/connector 没有可用仓库授权范围”，不是没有私有仓。
@@ -86,6 +86,7 @@ GitHub MCP 当前未暴露私有仓库；GitHub CLI 登录后可以看到私有�
 | --- | --- |
 | `REPO_AUDIT_REPORT.zh-CN.md` | 总体仓库盘点 |
 | `GITHUB_REPOSITORY_BRANCH_SNAPSHOT.zh-CN.md` | 当前 GitHub 可见仓库和远端分支快照 |
+| `BRANCH_IMPLEMENTATION_REVIEW.zh-CN.md` | 剩余分支是否有真实实现和提交的复查 |
 | `DATAFORGE_CORE_BRANCH_NOTE.zh-CN.md` | `DataForge.Core` 分支吸收关系说明 |
 | `PITS_BRANCH_NOTE.zh-CN.md` | `PITS` 合并分支和后续开发入口说明 |
 | `MEGAREPO_BRANCH_AUDIT.zh-CN.md` | `MegaRepo` 每个分支分析 |
@@ -111,18 +112,18 @@ GitHub MCP 当前未暴露私有仓库；GitHub CLI 登录后可以看到私有�
 
 | 仓库 | 建议 |
 | --- | --- |
-| `SvgManager` | 本地目录已删除，远端未删除 |
-| `avalonia-browser` | 本地目录已删除，远端未删除 |
-| `autoCrafter` | 本地目录已删除，远端未删除 |
-| `VibeSkills` | 本地目录已删除，远端未删除 |
+| `SvgManager` | 本地目录已删除，GitHub 远端已删除，mirror 已保留 |
+| `avalonia-browser` | 本地目录已删除，GitHub 远端已删除，mirror 已保留 |
+| `autoCrafter` | 本地目录已删除，GitHub 远端已删除，mirror 已保留 |
+| `VibeSkills` | 本地目录已删除，GitHub 远端已删除，mirror 已保留 |
 
-## 待明确确认删除
+## 已删除 GitHub 远端但本地保留
 
 | 仓库 | 建议 |
 | --- | --- |
-| `vibe-coding-platform` | 复活说明已写，可在你明确确认后删除 |
-| `chatbot` | 复活说明已写，可在你明确确认后删除 |
-| `autoTicket` | 复活说明已写，可在你明确确认后删除 |
+| `vibe-coding-platform` | GitHub 远端已删除；本地目录和 mirror 均保留 |
+| `chatbot` | GitHub 远端已删除；本地目录和 mirror 均保留 |
+| `autoTicket` | GitHub 远端已删除；本地目录和 mirror 均保留 |
 
 ## 需要保留或继续推进
 

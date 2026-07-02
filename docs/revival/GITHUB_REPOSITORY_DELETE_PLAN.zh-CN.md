@@ -14,17 +14,17 @@
 
 远端删除不是本轮自动动作。必须你再次点名仓库后再执行。
 
-## 当前远端仓库删除候选
+## 远端仓库删除结果
 
 | 仓库 | 远端状态 | 本地保留状态 | 说明 |
 | --- | --- | --- | --- |
-| `SvgManager` | public | 已有 mirror：`_github-delete-backups\SvgManager.git` | 本地目录已删，已有复活文档 |
-| `avalonia-browser` | public | 已有 mirror：`_github-delete-backups\avalonia-browser.git` | 本地目录已删，已有复活文档 |
-| `autoCrafter` | public | 已有 mirror：`_github-delete-backups\autoCrafter.git` | 本地目录已删，已有复活文档 |
-| `VibeSkills` | public | 已有 mirror：`_github-delete-backups\VibeSkills.git` | 本地目录已删，已有复活文档 |
-| `vibe-coding-platform` | private | 本地目录存在，另有 mirror：`_github-delete-backups\vibe-coding-platform.git` | 模板仓，已有复活文档 |
-| `chatbot` | private | 本地目录存在，另有 mirror：`_github-delete-backups\chatbot.git` | 模板仓，已有复活文档 |
-| `autoTicket` | private | 本地目录存在，另有 mirror：`_github-delete-backups\autoTicket.git` | 风险和维护成本高，已有复活文档 |
+| `SvgManager` | GitHub 远端已删除 | 已有 mirror：`_github-delete-backups\SvgManager.git` | 本地目录已删，已有复活文档 |
+| `avalonia-browser` | GitHub 远端已删除 | 已有 mirror：`_github-delete-backups\avalonia-browser.git` | 本地目录已删，已有复活文档 |
+| `autoCrafter` | GitHub 远端已删除 | 已有 mirror：`_github-delete-backups\autoCrafter.git` | 本地目录已删，已有复活文档 |
+| `VibeSkills` | GitHub 远端已删除 | 已有 mirror：`_github-delete-backups\VibeSkills.git` | 本地目录已删，已有复活文档 |
+| `vibe-coding-platform` | GitHub 远端已删除 | 本地目录存在，另有 mirror：`_github-delete-backups\vibe-coding-platform.git` | 模板仓，已有复活文档 |
+| `chatbot` | GitHub 远端已删除 | 本地目录存在，另有 mirror：`_github-delete-backups\chatbot.git` | 模板仓，已有复活文档 |
+| `autoTicket` | GitHub 远端已删除 | 本地目录存在，另有 mirror：`_github-delete-backups\autoTicket.git` | 风险和维护成本高，已有复活文档 |
 
 不建议远端删除：
 

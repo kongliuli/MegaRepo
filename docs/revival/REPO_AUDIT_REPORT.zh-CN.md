@@ -7,7 +7,7 @@
 
 已通过 Codex GitHub 连接确认账号为 `kongliuli`。
 
-Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本机 GitHub CLI 已登录，当前可见 23 个仓库，其中 9 个私有仓。详细记录见 `GITHUB_ACCESS_AND_CLEANUP_PLAN.zh-CN.md`、`PRIVATE_REPO_AUDIT.zh-CN.md` 和 `GITHUB_REPOSITORY_BRANCH_SNAPSHOT.zh-CN.md`。
+Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本机 GitHub CLI 已登录，当前可见 16 个仓库，其中 6 个私有仓。详细记录见 `GITHUB_ACCESS_AND_CLEANUP_PLAN.zh-CN.md`、`PRIVATE_REPO_AUDIT.zh-CN.md` 和 `GITHUB_REPOSITORY_BRANCH_SNAPSHOT.zh-CN.md`。
 
 ## 当前状态
 
@@ -44,22 +44,22 @@ Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本�
 | `DataForge.Core` | 保留 | 库项目结构完整，有测试；`trae` 分支已被 `main` 吸收，见 `DATAFORGE_CORE_BRANCH_NOTE.zh-CN.md` |
 | `PITS-Personal-Itinerary-Tracking-System` | 保留 | 当前在 `codex/merge-pits-branches` 分支；该分支已吸收两个 `trae` 分支，见 `PITS_BRANCH_NOTE.zh-CN.md` |
 | `yf.pt` | 保留 | 已合并 `origin/trae/agent-lLA2Bm` 到 `main`，构建通过 |
-| `SvgManager` | 已删除本地目录 | 删除前已形成 `SVGMANAGER_ARCHIVE_NOTE.zh-CN.md` |
-| `avalonia-browser` | 已删除本地目录 | 删除前已形成 `AVALONIA_BROWSER_ARCHIVE_NOTE.zh-CN.md` |
-| `autoCrafter` | 已删除本地目录 | 删除前已形成 `AUTOCRAFTER_ARCHIVE_NOTE.zh-CN.md` |
-| `VibeSkills` | 已删除本地目录 | 删除前已形成 `VIBESKILLS_ARCHIVE_NOTE.zh-CN.md` |
+| `SvgManager` | 已删除本地目录和 GitHub 远端 | 删除前已形成 `SVGMANAGER_ARCHIVE_NOTE.zh-CN.md`，mirror 已保留 |
+| `avalonia-browser` | 已删除本地目录和 GitHub 远端 | 删除前已形成 `AVALONIA_BROWSER_ARCHIVE_NOTE.zh-CN.md`，mirror 已保留 |
+| `autoCrafter` | 已删除本地目录和 GitHub 远端 | 删除前已形成 `AUTOCRAFTER_ARCHIVE_NOTE.zh-CN.md`，mirror 已保留 |
+| `VibeSkills` | 已删除本地目录和 GitHub 远端 | 删除前已形成 `VIBESKILLS_ARCHIVE_NOTE.zh-CN.md`，mirror 已保留 |
 
 ## 私有仓库结论
 
-当前通过 GitHub CLI 看到 9 个私有仓，并已逐分支检查；同时已对当前可见的 23 个仓库形成远端分支快照。细节见 `PRIVATE_REPO_AUDIT.zh-CN.md`、`PRIVATE_BRANCH_AUDIT.zh-CN.md`、`GITHUB_REPOSITORY_BRANCH_SNAPSHOT.zh-CN.md`。
+初始通过 GitHub CLI 看到 9 个私有仓，并已逐分支检查；其中 `vibe-coding-platform`、`chatbot`、`autoTicket` 的 GitHub 远端已删除，本地目录和 mirror 保留。当前可见私有仓为 6 个。
 
 | 仓库 | 结论 | 依据 |
 | --- | --- | --- |
 | `SpaceSniffMax` | 保留 | 默认 `origin/main` 很薄，但完整项目在 `origin/master`；见 `SPACESNIFFMAX_BRANCH_NOTE.zh-CN.md` |
 | `LocalDts` | 保留 | 独立数据迁移工具，`trae` 分支有 checkpoint/security/tests 增强；见 `LOCALDTS_RETENTION_NOTE.zh-CN.md` |
-| `vibe-coding-platform` | 可删 | Vercel AI coding 模板，已写复活说明：`VIBE_CODING_PLATFORM_ARCHIVE_NOTE.zh-CN.md` |
-| `chatbot` | 可删 | Vercel AI SDK chatbot 模板，已写复活说明：`CHATBOT_ARCHIVE_NOTE.zh-CN.md` |
-| `autoTicket` | 可删 | 自动票务方向，风险和维护成本高，已写复活说明：`AUTOTICKET_ARCHIVE_NOTE.zh-CN.md` |
+| `vibe-coding-platform` | GitHub 远端已删除，本地保留 | Vercel AI coding 模板，已写复活说明：`VIBE_CODING_PLATFORM_ARCHIVE_NOTE.zh-CN.md` |
+| `chatbot` | GitHub 远端已删除，本地保留 | Vercel AI SDK chatbot 模板，已写复活说明：`CHATBOT_ARCHIVE_NOTE.zh-CN.md` |
+| `autoTicket` | GitHub 远端已删除，本地保留 | 自动票务方向，风险和维护成本高，已写复活说明：`AUTOTICKET_ARCHIVE_NOTE.zh-CN.md` |
 | `TFTAssistant` | 暂不删 | 完整、有测试；见 `TFTASSISTANT_RETENTION_NOTE.zh-CN.md` |
 | `xinglin-core` | 保留 | 杏林核心相关；见 `XINGLIN_CORE_RETENTION_NOTE.zh-CN.md` |
 | `xinlingMain` | 先归档，不删 | 杏林旧资料/附件仓；见 `XINLINGMAIN_ARCHIVE_NOTE.zh-CN.md` |
@@ -94,9 +94,9 @@ Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本�
 
 | 仓库 | 结论 | 原因 |
 | --- | --- | --- |
-| `vibe-coding-platform` | 待你明确确认后删除 | 已形成复活说明：`VIBE_CODING_PLATFORM_ARCHIVE_NOTE.zh-CN.md` |
-| `chatbot` | 待你明确确认后删除 | 已形成复活说明：`CHATBOT_ARCHIVE_NOTE.zh-CN.md` |
-| `autoTicket` | 待你明确确认后删除 | 已形成复活说明：`AUTOTICKET_ARCHIVE_NOTE.zh-CN.md` |
+| `vibe-coding-platform` | GitHub 远端已删除，本地保留 | 已形成复活说明：`VIBE_CODING_PLATFORM_ARCHIVE_NOTE.zh-CN.md` |
+| `chatbot` | GitHub 远端已删除，本地保留 | 已形成复活说明：`CHATBOT_ARCHIVE_NOTE.zh-CN.md` |
+| `autoTicket` | GitHub 远端已删除，本地保留 | 已形成复活说明：`AUTOTICKET_ARCHIVE_NOTE.zh-CN.md` |
 
 ## MegaRepo 分支判断
 
@@ -124,10 +124,7 @@ Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本�
    - `Feishu.Context`：推送已合并后的 `main`。
    - `yf.pt`：推送已合并后的 `main`。
 2. `MegaRepo`：已新增 `archive/revival-docs` 分支保存复活文档，并清理旧远端分支；当前远端只保留 `main` 和 `archive/revival-docs`。
-3. 待你明确确认后可清理的私有仓：
-   - `vibe-coding-platform`
-   - `chatbot`
-   - `autoTicket`
+3. `vibe-coding-platform`、`chatbot`、`autoTicket` 的 GitHub 远端已删除；本地目录和 mirror 保留。
 
 ## 已做验证
 
@@ -136,10 +133,11 @@ Codex GitHub MCP/connector 当前没有返回可用仓库或安装账号；本�
 - 确认所有工作区都是 clean。
 - 检查项目文件、README、分支文档和代表性源码树。
 - 确认 `Jvedio` 的 `kvdeio`、`dev-5.0` 分支存在，并检查与 `master` 的差异规模；已形成 `JVEDIO_BRANCH_NOTE.zh-CN.md`。
-- 通过 GitHub CLI 读取到 23 个仓库，其中 9 个私有仓；已对当前可见仓库形成远端分支快照。
+- 通过 GitHub CLI 读取到当前 16 个仓库，其中 6 个私有仓；已对当前可见仓库形成远端分支快照。
 - 确认 `DataForge.Core` 的 `trae` 分支已被 `main` 吸收；确认 `PITS` 两个 `trae` 分支已被 `codex/merge-pits-branches` 吸收。
+- 已形成 `BRANCH_IMPLEMENTATION_REVIEW.zh-CN.md`，区分剩余分支中的真实实现、已吸收分支和纯文档分支。
 - 已为 `MegaRepo` 创建并推送 `archive/revival-docs` 分支，删除 15 个已留档旧远端分支。
-- 已删除 `SvgManager`、`avalonia-browser`、`autoCrafter`、`VibeSkills` 的本地目录，远端未删除。
+- 已删除 `SvgManager`、`avalonia-browser`、`autoCrafter`、`VibeSkills` 的本地目录；7 个删除候选的 GitHub 远端也已删除，mirror 均已保留。
 - 已合并 `yf.pt` 的真实代码分支，并执行 `dotnet restore` / `dotnet build`，构建通过。
 - 做过轻量密钥关键词扫；未发现明确真实泄漏，主要是普通变量名、公钥 token、依赖元数据等误报。
 
