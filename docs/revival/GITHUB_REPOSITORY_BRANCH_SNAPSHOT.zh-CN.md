@@ -18,17 +18,17 @@
 | --- | --- | --- | --- | --- |
 | `PITS-Personal-Itinerary-Tracking-System` | public | `main` | `codex/merge-pits-branches`, `main`, `trae/solo-agent-B7FdSg`, `trae/solo-agent-SrlJMZ` | 保留；`codex/merge-pits-branches` 已吸收两个 `trae` 分支，作为后续开发入口 |
 | `MegaRepo` | public | `main` | `archive/revival-docs`, `main` | 已清理旧远端分支；复活文档保存在 `archive/revival-docs` |
-| `SpaceSniffMax` | private | `main` | `main`, `master` | 保留；完整内容在 `master` |
+| `SpaceSniffMax` | private | `master` | `main`, `master` | 保留；完整内容在 `master`，默认分支已纠偏 |
 | `Jvedio` | public | `master` | `dev-5.0`, `kvdeio`, `master` | 保留；两个非默认分支都有价值 |
 | `SSSSR` | public | `main` | `main` | 保留 |
-| `yf.pt` | public | `main` | `main`, `trae/agent-lLA2Bm` | 已合并功能分支到本地 `main` |
-| `Feishu.Context` | public | `main` | `main`, `trae/solo-agent-vK7umW` | 已合并功能分支到本地 `main` |
-| `DataForge.Core` | public | `main` | `main`, `trae/solo-agent-xhpgEs` | 保留；`trae` 分支已被 `main` 吸收，后续从 `main` 开发 |
+| `yf.pt` | public | `main` | `main` | 已合并并删除 `trae` 远端分支 |
+| `Feishu.Context` | public | `main` | `main` | 已合并并删除 `trae` 远端分支 |
+| `DataForge.Core` | public | `main` | `main` | 保留；`trae` 分支已被 `main` 吸收并删除 |
 | `ReportPlatform` | public | `main` | `0520_master`, `main`, `trae/solo-agent-D3YJ42` | 活跃项目，保留 |
 | `MediaManager` | public | `main` | `main`, `trae/solo-agent-rLpN6W` | 活跃项目，保留 |
 | `LocalDts` | private | `main` | `main`, `trae/solo-agent-v64RLs` | 保留 |
-| `xinglin` | public | `main` | `chore/cleanup-scripts`, `feature/optimized-ui`, `gh-pages`, `gh-pages-deploy`, `github-deployment`, `housekeeping/cleanup-scripts-automation`, `main`, `master`, `trae/solo-agent-4r3beL`, `trae/solo-agent-IsgOw4`, `trae/solo-agent-Tw6Rsk`, `web-enhanced` | 活跃项目，保留 |
-| `2025CodeRepository` | private | `main` | `main`, `trae/solo-agent-zK4A1G` | 本地已精简，后续再拆 |
+| `xinglin` | public | `main` | `feature/optimized-ui`, `gh-pages`, `gh-pages-deploy`, `github-deployment`, `main`, `master`, `trae/solo-agent-4r3beL`, `trae/solo-agent-IsgOw4`, `trae/solo-agent-Tw6Rsk`, `web-enhanced` | 活跃项目，保留；两个无差异 cleanup 分支已删 |
+| `2025CodeRepository` | private | `main` | `main` | 本地已精简并推送，文档类 `trae` 分支已删 |
 | `TFTAssistant` | private | `main` | `main` | 保留 |
 | `xinglin-core` | private | `master` | `master` | 保留 |
 | `xinlingMain` | private | `main` | `main` | 先归档不删 |

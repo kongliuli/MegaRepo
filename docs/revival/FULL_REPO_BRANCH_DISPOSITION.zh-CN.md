@@ -22,17 +22,17 @@
 | --- | --- | --- | --- |
 | `MegaRepo` | public | 保留为复活文档仓 | 只保留 `main`、`archive/revival-docs` |
 | `PITS-Personal-Itinerary-Tracking-System` | public | 保留 | 后续入口是 `codex/merge-pits-branches`；两个 `trae` 可在确认后删 |
-| `SpaceSniffMax` | private | 保留 | `master` 是真实主线；`main` 过薄，需要纠偏 |
+| `SpaceSniffMax` | private | 保留 | `master` 是真实主线；默认分支已纠偏到 `master` |
 | `Jvedio` | public | 保留 | `dev-5.0`、`kvdeio` 都有实现，先都留 |
 | `SSSSR` | public | 保留 | 只有 `main` |
-| `yf.pt` | public | 保留 | 本地已合并 `trae`，推送后可删 `trae` |
-| `Feishu.Context` | public | 保留 | 本地已合并 `trae`，推送后可删 `trae` |
-| `DataForge.Core` | public | 保留 | `trae` 已被 `main` 吸收，可删 |
+| `yf.pt` | public | 保留 | `trae` 已合并推送并删除远端分支 |
+| `Feishu.Context` | public | 保留 | `trae` 已合并推送并删除远端分支 |
+| `DataForge.Core` | public | 保留 | `trae` 已被 `main` 吸收并删除远端分支 |
 | `ReportPlatform` | public | 活跃项目，保留 | `0520_master`、`trae` 都先留 |
 | `MediaManager` | public | 活跃项目，保留 | `trae` 有 API/性能实现，先留 |
 | `LocalDts` | private | 保留 | `trae` 有安全/断点/测试增强，先留 |
 | `xinglin` | public | 活跃项目，保留 | 多条实现/部署分支，需项目内再合并整理 |
-| `2025CodeRepository` | private | 临时留档 | `trae` 只有文档类改动，可删 |
+| `2025CodeRepository` | private | 临时留档 | `trae` 只有文档类改动，已删除远端分支 |
 | `TFTAssistant` | private | 保留 | 只有 `main` |
 | `xinglin-core` | private | 保留 | 只有 `master` |
 | `xinlingMain` | private | 归档保留 | 只有 `main` |
@@ -69,8 +69,8 @@
 
 | 分支 | 作用 | 可删除性 | 处理 |
 | --- | --- | --- | --- |
-| `main` | 很薄的默认分支 | 不直接删 | 先不要用它判断仓库价值 |
-| `master` | 完整实现，含 Rust 后端、React 前端、扫描/缓存/AI 分类 | 不删 | 建议改成默认分支，或合并到 `main` |
+| `main` | 很薄的旧默认分支 | 不直接删 | 先保留，不再作为默认判断入口 |
+| `master` | 完整实现，含 Rust 后端、React 前端、扫描/缓存/AI 分类 | 不删 | 已改为 GitHub 默认分支 |
 
 仓库处理：保留。优先做分支纠偏，不做删除。
 
@@ -102,8 +102,8 @@
 
 | 分支 | 作用 | 可删除性 | 处理 |
 | --- | --- | --- | --- |
-| `main` | 远端主线 | 不删 | 本地已领先 2 个提交，需推送 |
-| `trae/agent-lLA2Bm` | 云资源、告警、成本等真实实现 | 可删但先等 | 本地已合并；推送 `main` 后可删远端分支 |
+| `main` | 远端主线 | 不删 | 已推送合并结果 |
+| `trae/agent-lLA2Bm` | 云资源、告警、成本等真实实现 | 已删除 | 本地已合并并推送到 `main` |
 
 仓库处理：保留。下一步是推送本地 `main`，再删 `trae`。
 
@@ -113,8 +113,8 @@
 
 | 分支 | 作用 | 可删除性 | 处理 |
 | --- | --- | --- | --- |
-| `main` | 远端主线 | 不删 | 本地已领先 6 个提交，需推送 |
-| `trae/solo-agent-vK7umW` | 数据库服务、配置、UI/业务功能增强 | 可删但先等 | 本地已合并；推送 `main` 后可删远端分支 |
+| `main` | 远端主线 | 不删 | 已推送合并结果 |
+| `trae/solo-agent-vK7umW` | 数据库服务、配置、UI/业务功能增强 | 已删除 | 本地已合并并推送到 `main` |
 
 仓库处理：保留。下一步是推送本地 `main`，再删 `trae`。
 
@@ -125,7 +125,7 @@
 | 分支 | 作用 | 可删除性 | 处理 |
 | --- | --- | --- | --- |
 | `main` | 当前权威主线，已吸收 `trae` | 不删 | 保留 |
-| `trae/solo-agent-xhpgEs` | 性能优化/管道改动的中间分支 | 可删 | 已是 `main` 的祖先，删除远端分支即可 |
+| `trae/solo-agent-xhpgEs` | 性能优化/管道改动的中间分支 | 已删除 | 已是 `main` 的祖先 |
 
 仓库处理：保留。后续可做仓内瘦身，清理 `.sisyphus`、`.codebuddy` 等过程文件。
 
@@ -179,8 +179,8 @@
 | `trae/solo-agent-4r3beL` | AI 整理/实现候选 | 暂不删 | 有大量实现差异，先项目内合并判断 |
 | `trae/solo-agent-IsgOw4` | 缺陷与完善分类/实现候选 | 暂不删 | 有实现差异，先项目内合并判断 |
 | `trae/solo-agent-Tw6Rsk` | GitHub Pages 构建和测试 | 暂不删 | 有实现/部署差异，先项目内判断 |
-| `chore/cleanup-scripts` | cleanup 分支 | 可删 | 当前与 `main` 无差异 |
-| `housekeeping/cleanup-scripts-automation` | housekeeping 分支 | 可删 | 当前与 `main` 无差异 |
+| `chore/cleanup-scripts` | cleanup 分支 | 已删除 | 当前与 `main` 无差异 |
+| `housekeeping/cleanup-scripts-automation` | housekeeping 分支 | 已删除 | 当前与 `main` 无差异 |
 
 仓库处理：保留。`xinglin` 分支多但不是垃圾仓，建议单独开一次项目内分支整合。
 
@@ -191,7 +191,7 @@
 | 分支 | 作用 | 可删除性 | 处理 |
 | --- | --- | --- | --- |
 | `main` | 已精简留档主线 | 不删 | 保留，后期再拆 |
-| `trae/solo-agent-zK4A1G` | 2 个文档类改动 | 可删 | 没有代码实现，删除远端分支即可 |
+| `trae/solo-agent-zK4A1G` | 2 个文档类改动 | 已删除 | 没有代码实现 |
 
 仓库处理：临时保留。长期应拆出有用内容后删除或归档。
 
@@ -241,18 +241,21 @@
 
 ## 下一批可清理分支
 
-可以优先删除的远端分支：
+已完成删除：
 
-- `DataForge.Core/trae/solo-agent-xhpgEs`：已被 `main` 吸收。
-- `2025CodeRepository/trae/solo-agent-zK4A1G`：只有文档类改动。
-- `xinglin/chore/cleanup-scripts`：与 `main` 无差异。
-- `xinglin/housekeeping/cleanup-scripts-automation`：与 `main` 无差异。
+- `DataForge.Core/trae/solo-agent-xhpgEs`
+- `2025CodeRepository/trae/solo-agent-zK4A1G`
+- `xinglin/chore/cleanup-scripts`
+- `xinglin/housekeeping/cleanup-scripts-automation`
+- `yf.pt/trae/agent-lLA2Bm`
+- `Feishu.Context/trae/solo-agent-vK7umW`
 
-推送主线后再删除：
+暂缓删除：
 
-- `yf.pt/trae/agent-lLA2Bm`：本地已合并到 `main`，需先推送 `main`。
-- `Feishu.Context/trae/solo-agent-vK7umW`：本地已合并到 `main`，需先推送 `main`。
-- `PITS/trae/solo-agent-B7FdSg`、`PITS/trae/solo-agent-SrlJMZ`：已被 `codex/merge-pits-branches` 吸收，需先确认该整合分支就是后续入口。
+- `PITS/trae/solo-agent-B7FdSg`
+- `PITS/trae/solo-agent-SrlJMZ`
+
+暂缓原因：`PITS` 本地工作区有未提交开发改动，先不碰。
 
 先不删：
 
